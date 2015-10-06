@@ -1,0 +1,9 @@
+- name: akonstantinidis SSH key
+  sudo: yes
+  authorized_key:  user=akonstantinidis
+                   key="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC29QVxJbW5ksZR7Jej3kFS8Acwu9hzhROySveMCx59BGzApKJQaeuRsCK9tYQ+f1iAdOA3tPK1M2MEYb2kjHRNrky6yHtBEnn/AuIay28LV6nNXVa9G1Uz0i/ShXelYtYtGJUC+7z1NVOBO9HbMraV0v6DjQRqJlJ1eFvQRBkFdx25df7RBtnn46rrLp8oXvYJrtXqc3EHI4KoL2MtjWQ49VY3cRIOp0DqIOquNbQwQHhR4qcRz/Hz6mRGs0rr+w/3XDgapT3j5u7txsPRSQXxgTTP4C7CCZSDmO7DlV3We5AGmS0zZjrp0vr4r9+B4sQ/iaWWspru5x4dUnchUrpLhJFRTOkPw8ff9VuWgIMy+M5RLnIt33/3WO2OzRUMpK+PsdEDuA6AHQKuqdHCES63RA/orq/a81MLETL2zoNbZBFOc/iM1orgy7MSTRls7jQgYiA+6KZTG+FanouO1mtJT9cjIH8JNPPDoipHw73qg3iP16eJJOHxRL6jDrJ1uiKYHPGuE7ytaOJo7lJI8+ffX73daYkSjS5J/Knr3MBgLxrzYTOql0fI2iU7kMhnoDej0b0FIn2u6mo4yNiJnmQDQPQ8mUXQm9NExhcJ9EM2joLzP4hHhLi23DZRs9UUYBNdvA04oU0qR5xkdUwxLOFP/SU2b2tqVI6dYIqzMvi9Mw== akonstantinidis@library.ucla.edu"
+
+- name: sgurnick SSH key
+  sudo: yes
+  authorized_key: user=sgurnick
+                  key="ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA4Aql04lzXZr+v41tUunIRmpg2fQAN0tCo0a/E2ZjP59rUgtqilBTefmxa7f9xG//cL5A242sHwedeXOCYNs1Zylarnk6jdJmFPRvQFNiokTbG6aElUG9Op09cQM3UoBlrOfoAVmjMpIkU+UlZX783FCCqqtYLq4Q7S8uBGwPoXb5kFrckxT8TYFjX4CucAXJdf4cuXnyJisDUpHRZ2agastBaP+y78Mvm/SQy5WhBzwd6UlUBTgUHi/B8Bm072owqvs2ZmT93+dlmeX/BWaoaJK4XswPpx9PzmWpinTf8AtFNuAnlXPUBH9erurkkZ5WYEanZMFEWHP/v5nykIkN8w== sgurnick@lit265v"

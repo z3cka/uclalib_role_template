@@ -1,5 +1,4 @@
 ---
 - include: admin_users.yml
   when: "'production' and 'development' in group_names"
-- include: bash_profiles.yml
 - include: ssh_keys.yml

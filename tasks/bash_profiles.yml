@@ -1,2 +1,0 @@
-- copy: src=/etc/ansible/roles/common/files/bashrc_akonstantinidis dest=/home/akonstantinidis/.bashrc owner=akonstantinidis group=users
-  sudo: yes

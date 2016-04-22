@@ -1,4 +1,0 @@
----
-- include: admin_users.yml
-  when: "'production' and 'development' in group_names"
-- include: ssh_keys.yml

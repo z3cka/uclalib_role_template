@@ -1,4 +1,4 @@
-Role Name
+Role Name [![Build Status](https://travis-ci.org/UCLALibrary/uclalib_role_template.svg?branch=master)](https://travis-ci.org/UCLALibrary/uclalib_role_template)
 =========
 
 A brief description of the role goes here.

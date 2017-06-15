@@ -1,3 +1,11 @@
 ---
-- debug:
-    msg: "This test passed"
+  - name: Create user, ansible, with a key
+    user:
+      name: ansible
+      shell: /bin/bash
+      groups: wheel
+      
+  - name: add new key to authorized_keys
+    authorized_key:
+      user: ansible
+      key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"

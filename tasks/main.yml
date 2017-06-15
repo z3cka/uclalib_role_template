@@ -1,3 +1,11 @@
 ---
-- debug:
-    msg: "This test passed"
+- name: Install php
+  yum:
+    name: php
+  notify:
+    - restart httpd
+  
+- name: Copy over test.php file
+  copy:
+    src: test.php
+    dest: /var/www/html/test.php

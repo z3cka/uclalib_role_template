@@ -1,4 +1,8 @@
+- name: restart php-fpm
+  service:
+    name: rh-php70-php-fpm
+    state: restarted
 - name: restart httpd
   service:
-    name: httpd
+    name: httpd24-httpd
     state: restarted

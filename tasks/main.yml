@@ -11,6 +11,7 @@
   with_items:
     - httpd24
     - rh-php70-php-gd
+    - rh-php70-php-pdo
     - rh-php70-php-cli
     - rh-php70-php-fpm
 
@@ -31,3 +32,20 @@
     dest: /opt/rh/httpd24/root/var/www/html
     extra_opts: [--strip-components=1]
     remote_src: True
+
+- name: Create Drupal files directory
+  file:
+    path: /opt/rh/httpd24/root/var/www/html/sites/default/files
+    state: directory
+    owner: apache
+    group: apache
+    mode: 0775
+
+- name: Create a settings file
+  copy:
+    src: /opt/rh/httpd24/root/var/www/html/sites/default/default.settings.php
+    dest: /opt/rh/httpd24/root/var/www/html/sites/default/settings.php
+    owner: apache
+    group: apache
+    mode: 0744
+    remote_src: true

@@ -1,10 +1,7 @@
 ---
-### TODO: see if this is useful when required repos are not enabled
-# - name: Enabling the required rpm repos
-#   yum_repository:
-#     name: rhel-server-rhscl-6-rpms
-#     baseurl:
-  
+- name: Enabling the required rpm repos
+  command: yum-config-manager --enable rhel-server-rhscl-6-rpms
+
 - name: Installing apache, required php version + extensions
   yum:
     name: "{{ item }}"
@@ -15,8 +12,14 @@
     - rh-php70-php-pdo
     - rh-php70-php-mysqlnd
     - rh-php70-php-opcache
+    - rh-php70-php-xml
     - rh-php70-php-cli
     - rh-php70-php-fpm
+
+- name: configure apache to use php-fpm
+  copy:
+    src: fpm.conf
+    dest: /opt/rh/httpd24/root/etc/httpd/conf.d/fpm.conf
 
 - name: Restart Webserver
   command: echo "this task will restart the web services"

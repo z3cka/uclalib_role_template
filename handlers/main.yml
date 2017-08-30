@@ -2,7 +2,9 @@
   service:
     name: rh-php70-php-fpm
     state: restarted
+  listen: "restart webserver"
 - name: restart httpd
   service:
     name: httpd24-httpd
     state: restarted
+  listen: "restart webserver"

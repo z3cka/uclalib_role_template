@@ -9,23 +9,14 @@
     name: "{{ item }}"
     state: installed
   with_items:
-    # - rh-httpd24-httpd
     - httpd24
+    - rh-php70-php-gd
     - rh-php70-php-cli
     - rh-php70-php-fpm
-    # - php-gd
-    
-  # yum:
-  #   name: php-domxml-php4-php5
-  #   state: installed
-  # yum:
-  #   name: php-mysql
-  #   state: installed
-  
-  notify:
-    - restart php-fpm
-  notify:
-    - restart httpd
+
+- name: Restart Webserver
+  command: echo "this task will restart the web services"
+  notify: "restart webserver"
 
 - name: Get Drupal
   get_url:

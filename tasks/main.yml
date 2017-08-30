@@ -1,4 +1,5 @@
 ---
+### TODO: see if this is useful when required repos are not enabled
 # - name: Enabling the required rpm repos
 #   yum_repository:
 #     name: rhel-server-rhscl-6-rpms
@@ -12,6 +13,8 @@
     - httpd24
     - rh-php70-php-gd
     - rh-php70-php-pdo
+    - rh-php70-php-mysqlnd
+    - rh-php70-php-opcache
     - rh-php70-php-cli
     - rh-php70-php-fpm
 
@@ -21,13 +24,11 @@
 
 - name: Get Drupal
   get_url:
-    # url: https://ftp.drupal.org/files/projects/drupal-7.56.tar.gz
     url: https://ftp.drupal.org/files/projects/drupal-8.3.7.tar.gz
     dest: /opt/rh/httpd24/root/var/www
 
 - name: Unzip Drupal Archive
   unarchive:
-    # src: /var/www/drupal-7.56.tar.gz
     src: /opt/rh/httpd24/root/var/www/drupal-8.3.7.tar.gz
     dest: /opt/rh/httpd24/root/var/www/html
     extra_opts: [--strip-components=1]
@@ -49,3 +50,9 @@
     group: apache
     mode: 0744
     remote_src: true
+    force: no
+    
+- name: Enable clean URLs via AllowOverride All via httpd-d8.conf
+  copy:
+    src: httpd-d8.conf
+    dest: /opt/rh/httpd24/root/etc/httpd/conf.d/httpd-d8.conf

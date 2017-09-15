@@ -1,12 +1,14 @@
-Role Name [![Build Status](https://travis-ci.org/UCLALibrary/uclalib_role_template.svg?branch=master)](https://travis-ci.org/UCLALibrary/uclalib_role_template)
-=========
+Drupal 8 Requirements for Red Hat 6
+===================================
 
-A brief description of the role goes here.
+[![Build Status](https://travis-ci.org/UCLALibrary/uclalib_role_template.svg?branch=master)](https://travis-ci.org/UCLALibrary/uclalib_role_template) _(`--syntax-check` only)_
+
+This ansible role will install all php requrements for running Drupal 8 on Red Hat _(or Centos *testing in progress)_ 6.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+`root` or sudo access to Red Hat _(Centos)_ 6 instance.
 
 Role Variables
 --------------

@@ -1,6 +1,6 @@
 - name: restart php-fpm
   service:
-    name: rh-php70-php-fpm
+    name: rh-php56-php-fpm
     state: restarted
   listen: "restart webserver"
 - name: restart httpd
